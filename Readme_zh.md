@@ -31,7 +31,7 @@ $ carry store -s dev -H 192.168.0.1 -u root -p root -P 3306
 如果你能看到success的提示，证明你已经保存成功了，现在你可以登录mysql了:
 
 ```bash
-$ carray login -s dev
+$ carry login -s dev
 ```
 登录的前提是，你已经安装了mysql-client, 并且设置了正确的环境变量，否则你将会看到错误提示。
 
@@ -43,7 +43,7 @@ $ carry store -s dev -p 123456
 查看已经保存的section:
 ```bash
 $ carry list # watch all
-$ carray list -s dev # only watch section dev
+$ carry list -s dev # only watch section dev
 ```
 
 当然，你也可以删除已经废弃的section:

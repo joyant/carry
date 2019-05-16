@@ -30,7 +30,7 @@ if you see error tips, please make sure carry have write permission in dir /usr/
 if you see success, that prove you have store a section, if you want login mysql, you can input:
 
 ```bash
-$ carray login -s dev
+$ carry login -s dev
 ```
 the condition is that you have installed mysql-client , and set correct environment variables, otherwise you will see error tips.
 
@@ -42,7 +42,7 @@ $ carry store -s dev -p 123456
 you can watch the sections that you have stored.
 ```bash
 $ carry list # watch all
-$ carray list -s dev # only watch section dev
+$ carry list -s dev # only watch section dev
 ```
 
 You can delete section abandoned.
