@@ -1,5 +1,5 @@
 # Carry
-[英文文档](https://github.com/joyant/carry/blob/master/Readme.md)
+[English Document](https://github.com/joyant/carry/blob/master/Readme.md)
 
 Carry 是一个操作mysql的命令行工具，它让数据传输变得更方便。
 
