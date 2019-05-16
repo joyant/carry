@@ -1,0 +1,6 @@
+.idea
+go_build_main_go
+main
+go.sum
+go_build_main_go.exe
+main.exe
