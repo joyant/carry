@@ -4,9 +4,10 @@ import (
     "fmt"
     "gopkg.in/ini.v1"
     "os"
+    "runtime"
 )
 
-const iniPath = "/usr/local/etc/carry.ini"
+var iniPath = "/usr/local/etc/carry.ini"
 
 var iniFile *ini.File
 
@@ -15,6 +16,9 @@ func Ini() *ini.File {
 }
 
 func init()  {
+    if runtime.GOOS == "windows" {
+        iniPath = "C:/carry.ini"
+    }
     f, err := os.OpenFile(iniPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 766)
     if err != nil {
         fmt.Println("err:", err.Error(), "please make sure dir /usr/local/etc exist, and has read-write permission")
