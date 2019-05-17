@@ -65,6 +65,20 @@ $ carry trans -f dev.erp.user -t test.erp.user
 ```
 if table user is not exist on server test, carry will create it.
 
+Also you can transport sql querying result to a table:
+```bash
+$ carry trans -f dev.erp.sql -to test.erp.user # hope you have not a table named sql, dev.erp.sql means that you want to input a sql statement.
+```
+then Carry will want you input sql statement:
+```bash
+please input your sql:
+```
+just input sql statement, for example:
+```bash
+$ select * from user where id > 19
+```
+the query result will insert into `test.erp.user`
+
 You can drop table user without login:
 ```bash
 $ carry drop -s dev.erp.user

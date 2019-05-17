@@ -65,6 +65,21 @@ $ carry trans -f dev.erp.user -t test.erp.user
 ```
 如果user表不存在，Carry会询问你是否要创建它。
 
+你也可以将sql查询的结果复制到一个表中
+```bash
+$ carry trans -f dev.erp.sql -to test.erp.user # 希望你没有一个叫sql的表，否则Carry会以为你要输入sql语句
+```
+这个时候Carry会提示你输入sql语句：
+```bash
+please input your sql:
+```
+你可以输入你查询的语句，比如
+```bash
+$ select * from user where id > 19
+```
+Carry将会查询dev上user表中id大于20的记录，然后把结果保存到test的user表中。
+
+
 你可以不用登录就删除一个表：
 ```bash
 $ carry drop -s dev.erp.user
